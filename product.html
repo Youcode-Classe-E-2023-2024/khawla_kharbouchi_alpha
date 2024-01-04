@@ -425,10 +425,43 @@
                                                 <span>Log out</span>
                                             </a>
                                         </li>
+                                        <li class="flex">
+                                            <a  id="openModalButt class="text-white inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
+                                                href="# ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 " viewBox="0 0 576 512">
+                                                    <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20V180h44c11 0 20-9 20-20s-9-20-20-20H356V96c0-11-9-20-20-20s-20 9-20 20v44H272c-11 0-20 9-20 20z"/></svg>
+                                                <span>add product</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </template>
                             </li>
                         </ul>
+                        <!-- modal -->
+<div id="modal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center hidden">
+    
+    <div class="bg-white p-8 rounded-md shadow-md">
+    <form method="POST" action="" enctype="multipart/form-data">
+
+    <label for="file" class="block text-sm font-medium text-gray-700">Profile :</label>
+<input type="file" id="file" name="profile" class="mt-1 p-2 w-full border rounded-md">
+
+
+            <label for="nom" class="block text-sm font-medium text-gray-700">Nom :</label>
+            <input type="text" id="nom" name="name" class="mt-1 p-2 w-full border rounded-md">
+
+            <label for="nom" class="block text-sm font-medium text-gray-700">email :</label>
+            <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
+
+
+            <button type="submit" class="mt-4 bg-green-600 text-white p-2 rounded-md hover:bg-green-700">Ajouter</button>
+        </form>
+
+        <button id="closeModalButton" class="mt-4 text-sm text-gray-700 hover:text-gray-900">Fermer</button>
+    </div>
+</div>
+
+<!-- end modal -->
 
                     </div>
                 </header>
@@ -521,100 +554,7 @@
                 }
             }
         </script>
-        <script>
-            var chart = document.querySelector('#chartline')
-            var options = {
-                series: [{
-                    name: 'TEAM A',
-                    type: 'area',
-                    data: [44, 55, 31, 47, 31, 43, 26, 41, 31, 47, 33]
-                }, {
-                    name: 'TEAM B',
-                    type: 'line',
-                    data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43]
-                }],
-                chart: {
-                    height: 350,
-                    type: 'line',
-                    zoom: {
-                        enabled: false
-                    }
-                },
-                stroke: {
-                    curve: 'smooth'
-                },
-                fill: {
-                    type: 'solid',
-                    opacity: [0.35, 1],
-                },
-                labels: ['Dec 01', 'Dec 02', 'Dec 03', 'Dec 04', 'Dec 05', 'Dec 06', 'Dec 07', 'Dec 08', 'Dec 09 ',
-                    'Dec 10', 'Dec 11'
-                ],
-                markers: {
-                    size: 0
-                },
-                yaxis: [{
-                    title: {
-                        text: 'Series A',
-                    },
-                },
-                {
-                    opposite: true,
-                    title: {
-                        text: 'Series B',
-                    },
-                },
-                ],
-                tooltip: {
-                    shared: true,
-                    intersect: false,
-                    y: {
-                        formatter: function (y) {
-                            if (typeof y !== "undefined") {
-                                return y.toFixed(0) + " points";
-                            }
-                            return y;
-                        }
-                    }
-                }
-            };
-            var chart = new ApexCharts(chart, options);
-            chart.render();
-        </script>
-        <script>
-            var chart = document.querySelector('#chartpie')
-            var options = {
-                series: [44, 55, 67, 83],
-                chart: {
-                    height: 350,
-                    type: 'radialBar',
-                },
-                plotOptions: {
-                    radialBar: {
-                        dataLabels: {
-                            name: {
-                                fontSize: '22px',
-                            },
-                            value: {
-                                fontSize: '16px',
-                            },
-                            total: {
-                                show: true,
-                                label: 'Total',
-                                formatter: function (w) {
-                                    // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                                    return 249
-                                }
-                            }
-                        }
-                    }
-                },
-                labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
-            };
-            var chart = new ApexCharts(chart, options);
-            chart.render();
-        </script>
-    </body>
+            </body>
 
     </html>
 </body>
