@@ -425,52 +425,16 @@
                                             </a>
                                         </li>
                                         <li class="flex">
-                                            <a x-data="{ showModal: false }" @click="showModal = !showModal"
-                                                x-show="!showModal"
-                                                class="text-white inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
+                                            <a class="text-white inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                                                 href="#" id="modals">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 "
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2"
                                                     viewBox="0 0 576 512">
                                                     <path
                                                         d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20V180h44c11 0 20-9 20-20s-9-20-20-20H356V96c0-11-9-20-20-20s-20 9-20 20v44H272c-11 0-20 9-20 20z" />
                                                 </svg>
                                                 <span>add product</span>
                                             </a>
-                                            <div x-show="showModal" @click.away="showModal = false"
-                                                class="fixed inset-0 z-10 overflow-y-auto">
-                                                <div
-                                                    class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                                                    <div class="fixed inset-0 transition-opacity" aria-hidden="true">
-                                                        <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-                                                    </div>
 
-                                                    <span class="hidden sm:inline-block sm:align-middle sm:h-screen"
-                                                        aria-hidden="true">&#8203;</span>
-
-                                                    <div x-show="showModal" class="inline-block align-bottom bg-white rounded-lg text-left
-                        overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg
-                        sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-                                                        <!-- Your modal content goes here -->
-                                                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                                                            <!-- Modal content -->
-                                                            <h3 class="text-lg font-medium leading-6 text-gray-900"
-                                                                id="modal-headline">
-                                                                Modal Title
-                                                            </h3>
-                                                            <!-- Your form or other content goes here -->
-                                                        </div>
-                                                        <div
-                                                            class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                                                            <button @click="showModal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent
-                                    shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white
-                                    hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2
-                                    focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
-                                                                Close
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </li>
                                     </ul>
                                 </template>
