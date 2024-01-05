@@ -1,13 +1,25 @@
 <?php
 
-class DatabaseConnect
+class DatabaseSingleton
 {
+    private static $instance;
     private $pdo;
 
-    public function __construct($dbname, $host, $username, $password)
+ 
+    private function __construct($dbname, $host, $username, $password)
     {
         $this->createDatabase($dbname, $host, $username, $password);
         $this->connect($dbname, $host, $username, $password);
+    }
+
+  
+    public static function getInstance($dbname, $host, $username, $password)
+    {
+        if (!self::$instance) {
+            self::$instance = new self($dbname, $host, $username, $password);
+        }
+
+        return self::$instance;
     }
 
     private function createDatabase($dbname, $host, $username, $password)
@@ -17,7 +29,7 @@ class DatabaseConnect
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $this->pdo->exec("CREATE DATABASE IF NOT EXISTS $dbname");
-            
+
             // echo "Database created successfully!\n";
         } catch (PDOException $e) {
             echo "Error creating database: " . $e->getMessage() . "\n";
@@ -34,7 +46,7 @@ class DatabaseConnect
             echo "Connection failed: " . $e->getMessage() . "\n";
         }
     }
-
+    
     public function CreateTable($code)
     {
         try {
@@ -181,18 +193,5 @@ public function delete($table, $where) {
 
 
 
-// $tableCreationCode = "CREATE TABLE IF NOT EXISTS table1 (
-//     id INT PRIMARY KEY,
-//     name VARCHAR(50),
-//     age INT
-// )";
 
-// $conn->CreateTable($tableCreationCode);
 
-// $conn = new DatabaseConnect('phpframe', 'localhost', 'root', '');
-// $conn->delete("table1","id = 0");
-// print_r($conn->selectWhere("table1","id = 0"));
-// print_r($conn->selectAll("table1"));
-// $conn->Insert("table1", ['name' => "ichrak", 'age' => '12']);
-// $conn->Update("table1", ['name' => "ali", 'age' => '1'],"id = 0");
-?>
