@@ -531,7 +531,7 @@
                                                                                                                         </form>
                                                 </div>
                                                 <div class="flex mt-3">
-                                                    <button href="#_"
+                                                    <button href="#_" onclick="clickplproduct()"
                                                         class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group border border-black">
                                                         <span
                                                             class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
@@ -566,8 +566,8 @@
                                 <h3 class="font-bold text-lg italic text-center">add user
                                 </h3>
 
-                                <form class="" method="dialog">
-                                   
+                                <form class="" method="dialog" id="userForm">
+
                                     <div class="relative mt-3">
                                         <input
                                             class="appearance-none border pl-12 border-gray-100 shadow-sm focus:shadow-md focus:placeholder-gray-600  transition  rounded-md w-full py-3 text-gray-600 leading-tight focus:outline-none focus:ring-gray-600 focus:shadow-outline"
@@ -631,7 +631,7 @@
                                                                                                     </form>
                             </div>
                             <div class="flex mt-3">
-                                <button href="#_"
+                                <button onclick="clickplususer()" id="plusButton"
                                     class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group border border-black">
                                     <span
                                         class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
@@ -684,7 +684,42 @@
 
 
         <script>
-           
+           let userDataArray = [];
+           function clickplususer(){
+            console.log("hi")
+            const website = document.getElementById('website').value;
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('emaile').value;
+
+    const userData = {
+        website,
+        username,
+        email
+    };
+
+    userDataArray.push(userData);
+
+    console.log(userDataArray);
+           }
+           let productsaddedArray = [];
+           function clickplproduct(){
+            
+            console.log("hi")
+            const prix = document.getElementById('prix').value;
+    const title = document.getElementById('title').value;
+    const username = document.getElementById('username').value;
+
+    const productsadded = {
+        prix,
+        title,
+        username
+    };
+
+    productsaddedArray.push(productsadded);
+
+    console.log(productsaddedArray);
+           }
+
             console.log("dkhalet ");
             
             
