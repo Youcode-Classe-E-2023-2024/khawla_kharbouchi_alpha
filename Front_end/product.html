@@ -132,8 +132,8 @@
                         <div class="flex justify-center">
                             <div class="">
                                 <img class="hidden h-24 w-24 rounded-full sm:block object-cover mr-2 border-4 border-green-400"
-                                    src="7O2A9651.JPG" alt="">
-                                <p class="font-bold text-base  text-gray-400 pt-2 text-center w-24">khawla</p>
+                                    src="7O2A9714.JPG" alt="">
+                                <p class="font-bold text-base  text-gray-400 pt-2 text-center w-24">imad</p>
                             </div>
                         </div>
                         <div>
@@ -824,6 +824,11 @@ fetch('http://localhost/Alpha/Back_end/start/middleware.php/Pnotif', {
                     data.slice(0, 20).forEach((element) => {
                         output += `<a class="transform hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white border-4 border-green-400"
                                             href="#">
+                                            <div class="flex ml-10 mt-2 gap-4">
+  <span onclick="updateuser()" class="cursor-pointer px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-700">Update</span>
+  <span onclick="removeuser()" class="cursor-pointer px-4 py-2 bg-red-500 text-white rounded transition hover:bg-red-700">Remove</span>
+</div>
+
                                             <div class="p-5">
                                                 <div class="flex justify-between">
                                                     <img src="${element.url}" alt="image" class="rounded-lg">
@@ -840,6 +845,74 @@ fetch('http://localhost/Alpha/Back_end/start/middleware.php/Pnotif', {
                     document.querySelector(".firstdiv").innerHTML = output;
                 }
             };
+            function updatephoto(){
+                fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        method: 'DELETE',
+    })
+    .then(response => {
+      // Check if the response is successful (status code 2xx)
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
+      // Handle the success response
+      console.log('DELETE request successful');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+            }
+            function removephoto(){
+                fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        method: 'DELETE',
+    })
+    .then(response => {
+      // Check if the response is successful (status code 2xx)
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
+      // Handle the success response
+      console.log('DELETE request successful');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+            }
+            function updateuser(){
+                fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        method: 'DELETE',
+    })
+    .then(response => {
+      // Check if the response is successful (status code 2xx)
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
+      // Handle the success response
+      console.log('DELETE request successful');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+            }
+            function removeuser(){
+                fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        method: 'DELETE',
+    })
+    .then(response => {
+      // Check if the response is successful (status code 2xx)
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
+      // Handle the success response
+      console.log('DELETE request successful');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+            }
             xhr.send();
             var xhrusers = new XMLHttpRequest();
             xhrusers.open("GET", "https://jsonplaceholder.typicode.com/users", true);
@@ -850,6 +923,11 @@ fetch('http://localhost/Alpha/Back_end/start/middleware.php/Pnotif', {
                     datauser.slice(0, 20).forEach((element) => {
                         usertput += `<a class="transform hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white border-4 border-green-400"
                                             href="#">
+                                            <div class="flex gap-4 ml-10 mt-2">
+  <span onclick="updateuser()" class="cursor-pointer px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-700">Update</span>
+  <span onclick="removeuser()" class="cursor-pointer px-4 py-2 bg-red-500 text-white rounded transition hover:bg-red-700">Remove</span>
+</div>
+
                                             <div class="p-5">
                                                 <div class="flex justify-between">
                                                     <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" alt="image" class="rounded-lg">
