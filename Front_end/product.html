@@ -366,7 +366,7 @@
                                         class="notifholder absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-green-400 border border-green-500 rounded-md shadow-md">
                                         <script>
                                             setInterval(() => {
-                                                fetch('http://localhost/Alpha/Back_end/start/middleware.php/Notfication')
+                                                fetch('http://localhost/khawla_kharbouchi_alpha/Back_end/start/middleware.php/Notfication')
                                                     .then(response => response.json())
                                                     .then(data => {
                                                         console.log(data);
@@ -738,7 +738,7 @@
 function savenotif(notif){
     let data = {"message": notif};
 
-fetch('http://localhost/Alpha/Back_end/start/middleware.php/Pnotif', {
+fetch('http://localhost/khawla_kharbouchi_alpha/Back_end/start/middleware.php/Pnotif', {
   method: 'POST',
   body: JSON.stringify(data), 
   headers: {
