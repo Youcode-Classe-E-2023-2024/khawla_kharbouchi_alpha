@@ -360,13 +360,41 @@
                                         class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"></span>
                                 </button>
                                 <template x-if="isNotificationsMenuOpen">
-                                    <ul x-transition:leave="transition ease-in duration-150"
+                                    <ul id="notifholder" x-transition:leave="transition ease-in duration-150"
                                         x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
                                         @click.away="closeNotificationsMenu" @keydown.escape="closeNotificationsMenu"
-                                        class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-green-400 border border-green-500 rounded-md shadow-md">
-                                        <li class="flex">
+                                        class="notifholder absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-green-400 border border-green-500 rounded-md shadow-md">
+                                        <script>
+                                            setInterval(() => {
+                                                fetch('http://localhost/Alpha/Back_end/start/middleware.php/Notfication')
+                                                    .then(response => response.json())
+                                                    .then(data => {
+                                                        console.log(data);
+                                        
+                                                        // Clear previous content
+                                                        document.getElementById("notifholder").innerHTML = '';
+                                        
+                                                        data.forEach(element => {
+                                                            document.getElementById("notifholder").innerHTML += `
+                                                                <li class="flex">
+                                                                    <a class="text-white inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800">
+                                                                        <span>${element.notif}</span>
+                                                                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600">
+                                                                            ${element.id}
+                                                                        </span>
+                                                                    </a>
+                                                                </li>`;
+                                                        });
+                                                    })
+                                                    .catch(error => {
+                                                        console.error('Error:', error);
+                                                    });
+                                            }, 1000);
+                                        </script>
+                                        
+                                        <li class="flex bg-red-500">
                                             <a class="text-white inline-flex items-center justify-between w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                                                href="#">
+                                                >
                                                 <span>Messages</span>
                                                 <span
                                                     class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-600 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-600">
@@ -511,7 +539,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="flex mt-5">
-                                                            <button href="#_"
+                                                            <button onclick="saveproducts()"
                                                                 class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group border border-black">
                                                                 <span
                                                                     class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
@@ -531,7 +559,7 @@
                                                                                                                         </form>
                                                 </div>
                                                 <div class="flex mt-3">
-                                                    <button href="#_" onclick="clickplproduct()"
+                                                    <div onclick="clickplproduct()"
                                                         class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group border border-black">
                                                         <span
                                                             class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
@@ -547,7 +575,7 @@
                                                             class="absolute inset-0 w-full h-full border border-white rounded-md opacity-10"></span>
                                                         <span
                                                             class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                                                        <span class="relative italic text-black" class="btn">plus</button>
+                                                        <span class="relative italic text-black" class="btn">plus</div>
                                     </div>
 
                     </div>
@@ -611,7 +639,7 @@
                                     </div>
 
                                     <div class="flex mt-5">
-                                        <button href="#_"
+                                        <button onclick="saveusers()"
                                             class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group border border-black">
                                             <span
                                                 class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
@@ -631,7 +659,7 @@
                                                                                                     </form>
                             </div>
                             <div class="flex mt-3">
-                                <button onclick="clickplususer()" id="plusButton"
+                                <div onclick="clickplususer()" id="plusButton"
                                     class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-md shadow-2xl group border border-black">
                                     <span
                                         class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
@@ -647,7 +675,7 @@
                                         class="absolute inset-0 w-full h-full border border-white rounded-md opacity-10"></span>
                                     <span
                                         class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                                    <span class="relative italic text-black" class="btn">plus</button>
+                                    <span class="relative italic text-black" class="btn">plus</div>
                 </div>
 
 </div>
@@ -684,12 +712,73 @@
 
 
         <script>
-           let userDataArray = [];
+          
+
+
+           function saveusers() {
+    userDataArray.forEach(user => {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        console.log(user.email)
+        savenotif("user"+ "added user "+user.email);
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 201) {
+                    console.log('User data saved successfully:', user);
+                } else {
+                    console.error('Failed to save user data:', user);
+                }
+            }
+        };
+
+        xhr.send(JSON.stringify(user));
+    });
+}
+function savenotif(notif){
+    let data = {"message": notif};
+
+fetch('http://localhost/Alpha/Back_end/start/middleware.php/Pnotif', {
+  method: 'POST',
+  body: JSON.stringify(data), 
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
+            function saveproducts(){
+                productsaddedArray.forEach(user => {
+                    savenotif("user"+ "added user "+user.title);
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 201) {
+                    console.log('User data saved successfully:', user);
+                } else {
+                    console.error('Failed to save user data:', user);
+                }
+            }
+        };
+
+        xhr.send(JSON.stringify(user));
+    });
+            }
+           var userDataArray = [];
            function clickplususer(){
             console.log("hi")
-            const website = document.getElementById('website').value;
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('emaile').value;
+            var website = document.getElementById('website').value;
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('emaile').value;
 
     const userData = {
         website,
@@ -698,10 +787,13 @@
     };
 
     userDataArray.push(userData);
+    document.getElementById('website').textContent = ""
+    document.getElementById('username').textContent = ""
+    document.getElementById('emaile').textContent = ""
 
     console.log(userDataArray);
            }
-           let productsaddedArray = [];
+           var productsaddedArray = [];
            function clickplproduct(){
             
             console.log("hi")
