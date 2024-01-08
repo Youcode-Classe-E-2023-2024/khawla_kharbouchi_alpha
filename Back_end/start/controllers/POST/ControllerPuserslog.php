@@ -13,7 +13,7 @@ if(count($array) === 0){
     $response = array('status' => 'user not found ');
 }else{
 if (password_verify($password, $array[0]['password'])) {
-    $response = array('status' => 'user loged');
+    $response = array('status' => json_encode($array));
 } else {
     $response = array('status' => 'password incorrect');
 }
