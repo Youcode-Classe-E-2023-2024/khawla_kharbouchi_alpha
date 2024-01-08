@@ -31,7 +31,7 @@
                     <div class="text-white">
                         <div class="flex p-2  bg-gray-800">
                             <div class="flex py-3 px-2 items-center">
-                                <p class="text-2xl text-green-500 font-semibold">KHA</p
+                                <p class="text-2xl text-green-500 font-semibold"></p
                                     class="ml-2 font-semibold italic">
                                 DASHBOARD</p>
                             </div>
@@ -39,8 +39,8 @@
                         <div class="flex justify-center">
                             <div class="">
                                 <img class="hidden h-24 w-24 rounded-full sm:block object-cover mr-2 border-4 border-green-400"
-                                    src="7O2A9651.JPG" alt="">
-                                <p class="font-bold text-base  text-gray-400 pt-2 text-center w-24">khawla</p>
+                                    src="7O2A9714.JPG" alt="">
+                                <p class="font-bold text-base  text-gray-400 pt-2 text-center w-24">imad</p>
                             </div>
                         </div>
                         <div>
@@ -318,18 +318,7 @@
                                         @click.away="closeProfileMenu" @keydown.escape="closeProfileMenu"
                                         class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-green-400 border border-green-500 rounded-md shadow-md"
                                         aria-label="submenu">
-                                        <li class="flex">
-                                            <a class=" text-white inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
-                                                href="#">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none"
-                                                    viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                                <span>Profile</span>
-                                            </a>
-                                        </li>
+
                                         <li class="flex">
                                             <a class="text-white inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                                                 href="#">
@@ -361,25 +350,21 @@
                                     <div class="grid grid-cols-12 gap-6 mt-5">
                                         <a class="transform  hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-12 sm:col-span-6 xl:col-span-3 intro-y bg-white"
                                             href="#">
-                                            <div class="p-5">
+                                            <div class="p-5 ">
                                                 <div class="flex justify-between">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24"
+                                                        class="h-7 w-7 text-yellow-400" viewBox="0 0 448 512"
                                                         stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             stroke-width="2"
-                                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                                            d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                                                     </svg>
-                                                    <div
-                                                        class="bg-green-500 rounded-full h-6 px-2 flex justify-items-center text-white font-semibold text-sm">
-                                                        <span class="flex items-center">30%</span>
-                                                    </div>
                                                 </div>
                                                 <div class="ml-2 w-full flex-1">
                                                     <div>
-                                                        <div class="mt-3 text-3xl font-bold leading-8">4.510</div>
+                                                        <div class="mt-3 text-3xl font-bold leading-8" id="dataLengthContainer"></div>
 
-                                                        <div class="mt-1 text-base text-gray-600">Item Sales</div>
+                                                        <div class="mt-1 text-base text-gray-600">users</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -389,22 +374,19 @@
                                             <div class="p-5">
                                                 <div class="flex justify-between">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-7 w-7 text-yellow-400" fill="none" viewBox="0 0 24 24"
+                                                        class="h-7 w-7 text-yellow-400" viewBox="0 0 512 512"
                                                         stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             stroke-width="2"
-                                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                                    </svg>
-                                                    <div
-                                                        class="bg-red-500 rounded-full h-6 px-2 flex justify-items-center text-white font-semibold text-sm">
-                                                        <span class="flex items-center">30%</span>
-                                                    </div>
+                                                            d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/>
+                                                        </svg>
+                                                
                                                 </div>
                                                 <div class="ml-2 w-full flex-1">
                                                     <div>
-                                                        <div class="mt-3 text-3xl font-bold leading-8">4.510</div>
+                                                        <div class="mt-3 text-3xl font-bold leading-8" id="photos"></div>
 
-                                                        <div class="mt-1 text-base text-gray-600">Item Sales</div>
+                                                        <div class="mt-1 text-base text-gray-600">photos</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -414,25 +396,20 @@
                                             <div class="p-5">
                                                 <div class="flex justify-between">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-7 w-7 text-pink-600" fill="none" viewBox="0 0 24 24"
+                                                        class="h-7 w-7 text-pink-600" viewBox="0 0 512 512"
                                                         stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             stroke-width="2"
-                                                            d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            stroke-width="2"
-                                                            d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                                                            d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z" />
                                                     </svg>
-                                                    <div
-                                                        class="bg-yellow-500 rounded-full h-6 px-2 flex justify-items-center text-white font-semibold text-sm">
-                                                        <span class="flex items-center">30%</span>
-                                                    </div>
+
+                                                  
                                                 </div>
                                                 <div class="ml-2 w-full flex-1">
                                                     <div>
-                                                        <div class="mt-3 text-3xl font-bold leading-8">4.510</div>
+                                                        <div class="mt-3 text-3xl font-bold leading-8" id="comments"></div>
 
-                                                        <div class="mt-1 text-base text-gray-600">Item Sales</div>
+                                                        <div class="mt-1 text-base text-gray-600">comments</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -442,22 +419,19 @@
                                             <div class="p-5">
                                                 <div class="flex justify-between">
                                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24"
+                                                        class="h-7 w-7 text-green-400" viewBox="0 0 384 512"
                                                         stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             stroke-width="2"
-                                                            d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-                                                    </svg>
-                                                    <div
-                                                        class="bg-blue-500 rounded-full h-6 px-2 flex justify-items-center text-white font-semibold text-sm">
-                                                        <span class="flex items-center">30%</span>
-                                                    </div>
+                                                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                                                </svg>
+                                                
                                                 </div>
                                                 <div class="ml-2 w-full flex-1">
                                                     <div>
-                                                        <div class="mt-3 text-3xl font-bold leading-8">4.510</div>
+                                                        <div class="mt-3 text-3xl font-bold leading-8">4510</div>
 
-                                                        <div class="mt-1 text-base text-gray-600">Item Sales</div>
+                                                        <div class="mt-1 text-base text-gray-600">erreur tra lina</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -488,17 +462,53 @@
 
         <script>
             console.log("jat");
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    var data = JSON.parse(xhr.responseText);
-                    console.log(data)
-                }
-            };
-            xhr.send();
+        
+            document.addEventListener("DOMContentLoaded", function () {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var data = JSON.parse(xhr.responseText);
+
+                        var dataLengthContainer = document.getElementById("dataLengthContainer");
+                        if (dataLengthContainer) {
+                            dataLengthContainer.innerHTML = data.length;
+                            var userr = data.length
+                        }
+                    }
+                };
+                xhr.send();
+            });
         </script>
 
+<script>
+    console.log("Fetching photos...");
+    var xhrPhotos = new XMLHttpRequest();
+    xhrPhotos.open("GET", "https://jsonplaceholder.typicode.com/photos", true);
+    xhrPhotos.onreadystatechange = () => {
+        if (xhrPhotos.readyState == 4 && xhrPhotos.status == 200) {
+            var dataPhotos = JSON.parse(xhrPhotos.responseText);
+            document.getElementById("photos").innerHTML = dataPhotos.length;
+
+            var photor =dataPhotos.length
+        }
+    };
+    xhrPhotos.send();
+</script>
+
+<script>
+    console.log("Fetching comments...");
+    var xhrComments = new XMLHttpRequest();
+    xhrComments.open("GET", "https://jsonplaceholder.typicode.com/comments", true);
+    xhrComments.onreadystatechange = () => {
+        if (xhrComments.readyState == 4 && xhrComments.status == 200) {
+            var dataComments = JSON.parse(xhrComments.responseText);
+            document.getElementById("comments").innerHTML = dataComments.length;
+            var comr = dataComments.length
+        }
+    };
+    xhrComments.send();
+</script>
 
 
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -542,12 +552,21 @@
                 series: [{
                     name: 'TEAM A',
                     type: 'area',
-                    data: [44, 55, 31, 47, 31, 43, 26, 41, 31, 47, 33]
+                    data: [44, 55, 31, 47]
                 }, {
                     name: 'TEAM B',
                     type: 'line',
-                    data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43]
+                    data: [55, 69, 45, 61]
                 }],
+                // series: [{
+                //     name: 'TEAM A',
+                //     type: 'area',
+                //     data: [comr, photor, userr, 47]
+                // }, {
+                //     name: 'TEAM B',
+                //     type: 'line',
+                //     data: [comr + 5, photor +5, userr + 5, 47]
+                // }],
                 chart: {
                     height: 350,
                     type: 'line',
@@ -562,8 +581,7 @@
                     type: 'solid',
                     opacity: [0.35, 1],
                 },
-                labels: ['Dec 01', 'Dec 02', 'Dec 03', 'Dec 04', 'Dec 05', 'Dec 06', 'Dec 07', 'Dec 08', 'Dec 09 ',
-                    'Dec 10', 'Dec 11'
+                labels: ['photos', 'comments', 'posts', 'users'
                 ],
                 markers: {
                     size: 0
@@ -624,7 +642,7 @@
                         }
                     }
                 },
-                labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
+                labels: ['users', 'photos', 'comments', 'posts'],
             };
             var chart = new ApexCharts(chart, options);
             chart.render();
